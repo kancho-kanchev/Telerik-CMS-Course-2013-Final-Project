@@ -1,18 +1,15 @@
-Telerik Academy
-
----
-
-Обучението в академията започнах октомври 2012. Тук споделям домашните и задачите които съм решавал.
-
----
-
-#Курс "CMS системи 2013"
+Telerik Academy<br/>
+---<br/>
+Обучението в академията започнах октомври 2012. Тук споделям домашните и задачите които съм решавал.<br/>
+---<br/>
+<br/>
+#Курс "CMS системи 2013"<br/>
 
 [HomeWorks](https://github.com/kancho-kanchev/Telerik/tree/master/CMS%20Systems) - ([assignment](https://github.com/kancho-kanchev/Telerik/blob/master/CMS%20Systems/README.md)) - 16.04.2013<br/>
 [Final Project](https://github.com/kancho-kanchev/Telerik-CMS-Course-2013-Final-Project) - ([assignment](https://github.com/kancho-kanchev/Telerik-CMS-Course-2013-Final-Project/tree/master/Project-2)) - 30.05.2013<br/>
-
----
-
+<br/>
+---<br/>
+<br/>
 Критерии за оценяване на проект за курс "CMS системи 2013"
 
 Критерии за всички страници
