@@ -3,7 +3,6 @@
 Обучението в академията започнах октомври 2012. Тук споделям домашните и задачите които съм решавал.
 
 ---
-<br/>
 #Курс "CMS системи 2013"<br/>
 
 [HomeWorks](https://github.com/kancho-kanchev/Telerik/tree/master/CMS%20Systems) - ([assignment](https://github.com/kancho-kanchev/Telerik/blob/master/CMS%20Systems/README.md)) - 16.04.2013<br/>
