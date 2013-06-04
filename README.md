@@ -1,4 +1,4 @@
-#Telerik Academy
+Telerik Academy
 
 ---
 
@@ -6,7 +6,7 @@
 
 ---
 
-Курс "CMS системи 2013"
+#Курс "CMS системи 2013"
 [HomeWorks](https://github.com/kancho-kanchev/Telerik/tree/master/CMS%20Systems) - ([assignment](https://github.com/kancho-kanchev/Telerik/tree/master/CMS%20Systems)) - 04.06.2013
 https://github.com/kancho-kanchev/Telerik/tree/master/CMS%20Systems
 
