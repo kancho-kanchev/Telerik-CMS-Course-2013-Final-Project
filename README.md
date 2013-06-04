@@ -7,7 +7,7 @@
 
 [HomeWorks](https://github.com/kancho-kanchev/Telerik/tree/master/CMS%20Systems) - ([assignment](https://github.com/kancho-kanchev/Telerik/blob/master/CMS%20Systems/README.md)) - 16.04.2013<br/>
 [Final Project](https://github.com/kancho-kanchev/Telerik-CMS-Course-2013-Final-Project) - ([assignment](https://github.com/kancho-kanchev/Telerik-CMS-Course-2013-Final-Project/tree/master/Project-2)) - 30.05.2013<br/>
-<br/>
+
 ---
 <br/>
 Критерии за оценяване на проект за курс "CMS системи 2013"
