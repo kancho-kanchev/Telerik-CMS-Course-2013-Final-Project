@@ -1,9 +1,9 @@
 Telerik
-===
+---
 
 Обучението в академията започнах октомври 2012. Тук споделям домашните и задачите които съм решавал.
 
-===
+---
 
 Курс "CMS системи 2013"
 [HomeWorks](https://github.com/kancho-kanchev/Telerik/tree/master/CMS%20Systems) - ([assignment](https://github.com/kancho-kanchev/Telerik/tree/master/CMS%20Systems)) - 04.06.2013
