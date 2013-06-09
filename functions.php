@@ -116,9 +116,15 @@ add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 
 function theme_enqueue_scripts () {
 	wp_enqueue_script( 'jQuery' );
-	wp_enqueue_script( 'scripts',	get_template_directory_uri() . '/js/jquery-1.8.0.min.js', array( 'jquery' ), 1.8, true );
-	wp_enqueue_script( 'jqueryCarouFredSel',	get_template_directory_uri() . '/js/jquery.carouFredSel-5.5.0-packed.js', array( 'jquery' ), 5.5, true );
-	wp_enqueue_script( 'functions',	get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), 1.0, true );
+	//wp_enqueue_script( 'scripts',	get_template_directory_uri() . '/js/jquery-1.8.0.min.js' );
+	//wp_enqueue_script( 'jqueryCarouFredSel',	get_template_directory_uri() . '/js/jquery.carouFredSel-5.5.0-packed.js' );
+	//wp_enqueue_script( 'functions',	get_template_directory_uri() . '/js/functions.js' );
+}
+
+add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts');
+
+function wpb_add_google_fonts() {
+	echo '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300,200,100">';
 }
 
 /*************************** theme options page ***************************/

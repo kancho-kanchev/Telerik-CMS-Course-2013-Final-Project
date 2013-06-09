@@ -115,12 +115,8 @@ textarea { overflow: auto; }
 .main a.more { background: url(images/blue-arr.png) no-repeat 0 6px; text-decoration: underline; padding-left: 8px; font-weight: 500; font-family: 'Raleway', sans-serif; }
 .main a:hover { text-decoration: none; }
 
-.main p{
-  text-align:justify;
-}
 .main .cols { padding-bottom: 38px;  }
 .main .cols .col { float:left; width: 286px; padding-right: 40px; }
-.main .cols .col-span-2 { float:left; width: 572px; padding-right: 40px; }
 .main .cols .col.last { padding-right: 0; }
 .main .cols .col img.left { margin-right: 24px; margin-bottom:10px;  }
 .main .cols .col a { text-decoration: underline; }

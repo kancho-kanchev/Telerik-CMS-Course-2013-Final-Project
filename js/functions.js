@@ -1,4 +1,4 @@
-$(function() {
+jQuery(function($) {
 	$(document).on('focusin', '.field, textarea', function() {
 		if(this.title==this.value) {
 			this.value = '';
