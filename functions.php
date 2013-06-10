@@ -14,8 +14,8 @@ register_sidebar(array(
 'name' => __( 'About Us' ),
 'id' => 'about_us',
 'description' => __( 'Front Page About Sidebar' ),
-'before_title' => '<h2>',
-'after_title' => '</h2>',
+'before_title' => '<h3>',
+'after_title' => '</h3>',
 'before_widget' => '<div class="block subnav">',
 'after_widget' => '</div>'
 ));
@@ -117,7 +117,7 @@ add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 
 function theme_enqueue_scripts () {
 	wp_enqueue_script( 'jQuery' );
-	//wp_enqueue_script( 'scripts',	get_template_directory_uri() . '/js/jquery-1.8.0.min.js' );
+	//wp_enqueue_script( 'scripts',	get_template_directory_uri() . '/js/jquery-1.8.0.min.js', array('jquery') );
 	//wp_enqueue_script( 'jqueryCarouFredSel',	get_template_directory_uri() . '/js/jquery.carouFredSel-5.5.0-packed.js' );
 	//wp_enqueue_script( 'functions',	get_template_directory_uri() . '/js/functions.js' );
 }
