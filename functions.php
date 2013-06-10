@@ -11,9 +11,9 @@
  * Sets up the sidebars.
  */
 register_sidebar(array(
-'name' => __( 'Home Left Sidebar' ),
-'id' => 'home-left-sidebar',
-'description' => __( 'Home Page Left Sidebar' ),
+'name' => __( 'About Us' ),
+'id' => 'about_us',
+'description' => __( 'Front Page About Sidebar' ),
 'before_title' => '<h2>',
 'after_title' => '</h2>',
 'before_widget' => '<div class="block subnav">',
@@ -108,6 +108,7 @@ register_sidebar($sidebar_args);
  * Sets up the menu.
  */
 register_nav_menu('top-side-menu', "Top menu");
+register_nav_menu('footer-menu', "Footer menu");
 
 /**
  * Add Scripts.

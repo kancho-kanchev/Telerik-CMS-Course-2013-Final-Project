@@ -74,16 +74,12 @@
 			<!-- footer -->
 			<div id="footer">
 				<div class="footer-nav">
-					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">Projects</a></li>
-						<li><a href="#">Solutions</a></li>
-						<li><a href="#">Jobs</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">Contacts</a></li>
-					</ul>
+				<?php wp_nav_menu(array (
+					'theme_location'  => 'footer-menu',
+					'container'       => '',
+					'menu_class'      => ''
+					)
+				);?>
 					<div class="cl">&nbsp;</div>
 				</div>
 				<p class="copy">&copy; Copyright 2012<span>|</span>Telerik CMS Course. Design by <a href="http://academy.telerik.com" target="_blank">Telerik Software Academy</a></p>

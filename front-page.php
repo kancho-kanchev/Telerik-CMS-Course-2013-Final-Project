@@ -132,6 +132,7 @@
 
 				<section class="cols">
 					<div class="col">
+						<?php if(!dynamic_sidebar('about_us')): endif; ?>
 						<h3>About Us</h3>
 						<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui ipsum, cursus ut adipiscing porta, vestibulum quis turpis. Ut ultricies rutrum lorem, in blandit tortor congue pulvinar lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /><a href="#" class="more">view more</a></p>

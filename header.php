@@ -56,17 +56,6 @@
 					'menu_class'      => 'nav'
 					)
 				);?>
-				<a href="#" class="nav-btn">HOME<span></span></a>
-				<ul>
-					<li class="active"><a href="#">home</a></li>
-					<li><a href="#">about us</a></li>
-					<li><a href="#">services</a></li>
-					<li><a href="#">projects</a></li>
-					<li><a href="#">solutions</a></li>
-					<li><a href="#">jobs</a></li>
-					<li><a href="#">blog</a></li>
-					<li><a href="#">contacts</a></li>
-				</ul>
 				<div class="cl">&nbsp;</div>
 			</nav>
 			<!-- end of navigation -->
