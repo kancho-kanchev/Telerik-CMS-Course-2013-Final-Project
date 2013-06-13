@@ -14,15 +14,6 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<title><?php bloginfo('description'); ?> - <?php bloginfo('name'); ?></title>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo("stylesheet_url"); ?>" />
-<?php if( !(is_home()) ) { ?>
-	<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri(); ?>/css/front-style.css" />
-<?php } ?>
-	<!--[if lt IE 9]>
-		<script src="<?php echo get_template_directory_uri() ?>/js/modernizr.custom.js"></script>
-	<![endif]-->
-	<script src="<?php echo get_template_directory_uri() ?>/js/jquery-1.8.0.min.js" type="text/javascript"></script>
-	<script src="<?php echo get_template_directory_uri() ?>/js/jquery.carouFredSel-5.5.0-packed.js" type="text/javascript"></script>
-	<script src="<?php echo get_template_directory_uri() ?>/js/functions.js" type="text/javascript"></script>
 	<?php wp_head(); ?>
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/favicon.ico" />
 </head>
