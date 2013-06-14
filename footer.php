@@ -11,6 +11,8 @@
 
 				<section class="entries">
 					<div class="entry">
+<?php get_sidebar('footer-left'); ?>
+<!-- 
 						<h3>Latest Blog Posts</h3>
 						<div class="entry-inner">
 							<div class="date">
@@ -45,12 +47,10 @@
 								<p class="meta"><a href="#">by John Doe </a> /  <a href="#">Category Name</a></p>
 							</div>
 						</div>
+-->
 					</div>
 					<div class="entry">
-						<h3>Latest Project</h3>
-						<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h5>
-						<a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/col-img2.png" alt="" /></a>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui ipsum, cursus ut adipiscing porta, vestibulum quis turpis adispicing amet sit.  <br /><a href="#" class="more">view more</a></p>
+<?php get_sidebar('footer-center'); ?>					
 					</div>
 					<div class="entry">
 						<h3>Testimonials</h3>

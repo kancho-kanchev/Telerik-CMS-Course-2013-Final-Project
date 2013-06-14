@@ -112,7 +112,7 @@ textarea { overflow: auto; }
 .main h3 { font-size: 16px; font-family: 'Raleway', sans-serif; color:#4a4a4a; font-weight: 500; padding-bottom: 12px; margin-bottom: 8px; background: url(images/border-title.png) repeat-x 0 bottom;}
 .main h5 { font-size: 12px; }
 .main h5 { padding-bottom: 10px; }
-.main a.more { background: url(images/blue-arr.png) no-repeat 0 6px; text-decoration: underline; padding-left: 8px; font-weight: 500; font-family: 'Raleway', sans-serif; }
+.main a.more-link { background: url(images/blue-arr.png) no-repeat 0 6px; text-decoration: underline; padding-left: 8px; font-weight: 500; font-family: 'Raleway', sans-serif; }
 .main a:hover { text-decoration: none; }
 
 .main .cols { padding-bottom: 38px;  }

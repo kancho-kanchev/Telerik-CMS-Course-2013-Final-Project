@@ -1,5 +1,3 @@
-.main p{
-  text-align:justify;
-}
-
+.main p{ text-align:justify; }
 .main .cols .col-span-2 { float:left; width: 572px; padding-right: 40px; }
+.main p.meta a, .main p.meta {  color: #b2b2b2; }

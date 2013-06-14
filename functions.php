@@ -9,6 +9,38 @@
  */
 
 /**
+ * Enable featured image.
+ */
+add_theme_support( 'post-thumbnails');
+
+/**
+ * Sets up the sidebars.
+ */
+$sidebar_args = array(
+		'id' => 'sidebar-right',
+		'name' => 'Right Sidebar',
+		'description'   => 'Choose category from template options page',
+		'class'         => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>'
+);
+register_sidebar($sidebar_args);
+
+$sidebar_args = array(
+		'id' => 'sidebar-footer-center',
+		'name' => 'Footer Center Sidebar',
+		'description'   => 'Choose category from template options page',
+		'class'         => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>'
+);
+register_sidebar($sidebar_args);
+
+/**
  * Sets up the menu.
  */
 register_nav_menu('top-side-menu', "Top menu");
