@@ -9,20 +9,23 @@
  */
 ?>
 <!-- ******** sidebar services ******** -->
-<?php if (! dynamic_sidebar('sidebar-footer-left')):?>
-	<?php
-	global $more;
-	$more = 0;
+<?php
+if (! dynamic_sidebar('sidebar-footer-left')):
+	//get theme options
+	$options = get_option( 'theme_settings' );
 	$count = 0;
 	$my_date = '';
-	query_posts('cat=8');
-	if(have_posts()) :?>
-						<h3>Latest Blog Posts</h3>
-	<?php while (have_posts() && ($count < 3)) :
-		the_post();
-		$count++;
-		$my_date = get_the_date('dMY');
-	?>
+	if(isset($options['sidebar_right_cat'])&&($options['sidebar_right_cat']!='')) :
+		query_posts( 'category_name='.$options['sidebar_footer_left'] );
+		if(have_posts()) :
+?>
+			<h3><?php echo esc_attr( $options['sidebar_footer_left_title'] ); ?></h3>
+<?php
+			while (have_posts() && ($count < 3)) :
+				the_post();
+				$count++;
+				$my_date = get_the_date('dMY');
+?>
 						<div class="entry-inner">
 							<div class="date">
 								<strong><?php echo $my_date[0];echo $my_date[1]; ?></strong>
@@ -34,19 +37,14 @@
 								<p class="meta">by: <?php the_author_posts_link(); ?> /  <?php the_category(', ') ?></p>
 							</div>
 						</div>
-		<?php 
-		endwhile;
-	else : ?>
-<!--
-						<h3>No posts!</h3>
-						<ul>
-							<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-							<li><a href="#">Sit atmet, consectetur lorem </a></li>
-							<li><a href="#">Consectetur adispicing dolor</a></li>
-							<li><a href="#">Lipsuim dolor amet adpispicing</a></li>
-							<li><a href="#">Lipsuim dolor amet adpispicing</a></li>
-						</ul>
- -->
-	<?php endif;
-	wp_reset_query(); ?>
-<?php endif;?>
+<?php 
+			endwhile;
+		else :
+?>
+<!-- If not dynamic sidebar and not posts to display. Put some code here to run it -->
+<?php
+		endif;
+		wp_reset_query();
+	endif;
+endif;
+?>

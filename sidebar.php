@@ -9,26 +9,22 @@
  */
 ?>
 <!-- ******** sidebar services ******** -->
-<?php if (! dynamic_sidebar('sidebar-right')):?>
-	<?php
-	global $more;
-	$more = 0;
-	query_posts('cat=5');
-	if(have_posts()) :
-		the_post(); ?>
-		<h3><?php the_title();?></h3>
-		<?php the_content('view more');
-	else : ?>
-<!--
-						<h3>No posts!</h3>
-						<ul>
-							<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-							<li><a href="#">Sit atmet, consectetur lorem </a></li>
-							<li><a href="#">Consectetur adispicing dolor</a></li>
-							<li><a href="#">Lipsuim dolor amet adpispicing</a></li>
-							<li><a href="#">Lipsuim dolor amet adpispicing</a></li>
-						</ul>
- -->
-	<?php endif;
-	wp_reset_query(); ?>
-<?php endif;?>
+<?php if (! dynamic_sidebar('sidebar-right')):
+	//get theme options
+	$options = get_option( 'theme_settings' );
+	$count = 0;
+	if(isset($options['sidebar_right_cat'])&&($options['sidebar_right_cat']!='')) :
+		query_posts('category_name='.$options['sidebar_right_cat']);
+		if(have_posts()) :
+			the_post(); ?>
+			<h3><?php the_title();?></h3>
+<?php the_content('view more');
+		else :
+?>
+<!-- If not dynamic sidebar and not posts to display. Put some code here to run it -->
+<?php
+		endif;
+		wp_reset_query();
+	endif;
+endif;
+?>

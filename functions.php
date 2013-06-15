@@ -89,6 +89,20 @@ register_nav_menu('footer-menu', "Footer menu");
 				wp_enqueue_style('page-style');
 			}
 		}
+		/*************************** theme options page ***************************/
 		
+		/**
+		 * Tell WordPress to run telerik_setup() when the 'after_setup_theme' hook is run.
+		 */
+		add_action( 'after_setup_theme', 'telerik_setup' );
+		
+		if ( ! function_exists( 'telerik_setup' ) ):
+
+		function telerik_setup() {
+			
+			// Load up our theme options page and related code.
+			require( get_template_directory() . '/inc/theme-options.php' );
+		}
+		endif; // telerik_setup
 
 	?>
