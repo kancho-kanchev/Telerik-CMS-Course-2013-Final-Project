@@ -57,7 +57,7 @@ textarea { overflow: auto; }
 #navigation ul li { padding: 0 10px; float: left; font-family: 'Raleway', sans-serif; font-size: 15px; font-weight: 500; }
 #navigation ul li:first-child { padding-left: 0; }
 #navigation ul li a { color: #4a4a4a; padding: 0 7px; display:block; height: 21px; line-height: 21px; border: 2px solid transparent; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; }
-#navigation ul li.active a,
+#navigation ul li.active a, #navigation ul li.current-menu-item a, #navigation ul li.current_page_item a,
 #navigation ul li a:hover { border: 2px solid #6522CC;  background: url(images/nav-btn.png) repeat-x 0 0; color:#fff; text-decoration: none; }
 #navigation a.nav-btn { display:none; }
 

@@ -13,7 +13,7 @@
 <?php get_sidebar('footer-left'); ?>
 					</div>
 					<div class="entry">
-<?php get_sidebar('footer-center'); ?>					
+<?php get_sidebar('footer-center'); ?>
 					</div>
 					<div class="entry">
 <?php get_sidebar('footer-right'); ?>

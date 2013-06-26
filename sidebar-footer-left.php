@@ -15,13 +15,13 @@ if (! dynamic_sidebar('sidebar-footer-left')):
 	$options = get_option( 'theme_settings' );
 	$count = 0;
 	$my_date = '';
-	if(isset($options['sidebar_right_cat'])&&($options['sidebar_right_cat']!='')) :
-		query_posts( 'category_name='.$options['sidebar_footer_left'] );
+	if(isset($options['sidebar_footer_left_cat'])&&($options['sidebar_footer_left_cat']!='')&&($options['sidebar_footer_left_num'])&&($options['sidebar_footer_left_num']>0)) :
+		query_posts( 'category_name='.$options['sidebar_footer_left_cat'] );
 		if(have_posts()) :
 ?>
-			<h3><?php echo esc_attr( $options['sidebar_footer_left_title'] ); ?></h3>
+			<h3><?php if(isset($options['sidebar_footer_left_title'])&&($options['sidebar_footer_left_title']!='')){ echo esc_attr( $options['sidebar_footer_left_title'] );} ?></h3>
 <?php
-			while (have_posts() && ($count < 3)) :
+			while (have_posts() && ($count < $options['sidebar_footer_left_num'])) :
 				the_post();
 				$count++;
 				$my_date = get_the_date('dMY');
@@ -40,11 +40,13 @@ if (! dynamic_sidebar('sidebar-footer-left')):
 <?php 
 			endwhile;
 		else :
-?>
-<!-- If not dynamic sidebar and not posts to display. Put some code here to run it -->
-<?php
+			// put echo message here
+			_e('<br />');
 		endif;
 		wp_reset_query();
+	else :
+		// put echo message here
+		_e('<br />');
 	endif;
 endif;
 ?>

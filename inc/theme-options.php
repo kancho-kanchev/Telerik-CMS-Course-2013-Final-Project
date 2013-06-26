@@ -188,4 +188,4 @@ function telerik_theme_options_render_page() {
 </div><!-- END wrap -->
 	<?php
 }
-
+?>
