@@ -19,7 +19,7 @@
 			<h3><?php if(isset($options['sidebar_footer_right_title1'])&&($options['sidebar_footer_right_title1']!='')){ echo esc_attr( $options['sidebar_footer_right_title1'] );} ?></h3>
 			<div class="testimonials">
 <?php the_content('view more'); ?>
-				<p class="author"><?php the_author(); ?>, <strong>Opravi me</strong></p>
+				<p class="author"><?php the_author(); ?>, <strong><?php the_author_meta('description'); ?></strong></p>
 			</div>
 <?php
 		else :
