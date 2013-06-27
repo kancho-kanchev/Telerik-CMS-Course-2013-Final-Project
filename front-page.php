@@ -12,7 +12,7 @@
 <!-- ******** front page ******** -->
 			<!-- slider-holder -->
 			<div class="slider-holder">
-				
+			
 				<!-- slider -->
 				<div class="slider">
 					<div class="socials">

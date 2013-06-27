@@ -52,16 +52,30 @@ textarea { overflow: auto; }
 .search input.field { float:left; width: 166px; padding:0 8px; height: 24px; line-height: 24px;  border: 1px solid #d3d3d3; font-size: 11px; color:#bebebe; background: #ededed; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; }
 .search input.search-btn { float:left;  font-size: 0; line-height: 0; text-indent: -4000px; cursor: pointer; width: 20px; height: 26px; border: 0; background: url(images/search-ico.png) no-repeat 0 0; }
 
-#navigation { padding:0 21px;  margin-bottom: 15px; }
+#navigation { padding:0 21px;  margin-bottom: 9px; }
 #navigation ul { list-style:none; list-style-position: outside; }
 #navigation ul li { padding: 0 10px; float: left; font-family: 'Raleway', sans-serif; font-size: 15px; font-weight: 500; }
-#navigation ul li:first-child { padding-left: 0; }
+#navigation>ul>li:first-child { padding-left: 0; }
 #navigation ul li a { color: #4a4a4a; padding: 0 7px; display:block; height: 21px; line-height: 21px; border: 2px solid transparent; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; }
-#navigation ul li.active a, #navigation ul li.current-menu-item a, #navigation ul li.current_page_item a,
-#navigation ul li a:hover { border: 2px solid #6522CC;  background: url(images/nav-btn.png) repeat-x 0 0; color:#fff; text-decoration: none; }
+#navigation ul li.active a,
+#navigation ul.sub-menu li.current-menu-item>a,
+#navigation ul.sub-menu li.current_page_item>a,
+#navigation ul li.current-menu-item>a,
+#navigation ul li.current_page_item>a,
+#navigation ul li a:hover { border: 2px solid #6522CC; background: url(images/nav-btn.png) repeat-x 0 0; color:#fff; text-decoration: none; }
 #navigation a.nav-btn { display:none; }
+/* Sub Menu */
+nav#navigation ul ul { display: none; }
+nav#navigation ul li:hover > ul { display: block; z-index: 1; }
+nav#navigation ul { position: relative; display: inline-table; }
+nav#navigation ul:after { clear: both; display: block; }			
+nav#navigation ul ul { background: url(images/body-pattern.png) repeat 0 0; border-radius: 3px; padding: 7px 7px; border: 1px solid #4a4a4a; text-decoration: none; position: absolute; top: 100%; }
+nav#navigation ul ul li { float: none; position: relative; }
+nav#navigation ul ul.sub-menu li a { color: #4a4a4a; background: url(images/body-pattern.png) repeat 0 0; padding: 0 7px; margin: 2px 0; display:block; border: 2px solid transparent; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; }
+nav#navigation ul ul li a:hover { border: 2px solid #6522CC; background: url(images/nav-btn.png) repeat-x 0 0; color:#fff; text-decoration: none; }
+nav#navigation ul ul ul { position: absolute; left: 100%; top:0; }
 
-.slider-holder { position: relative; margin-bottom:30px;   }
+.slider-holder { position: relative; margin-bottom:30px; }
 
 .slider { background: url(images/slider-bg.jpg) no-repeat 0 0; width: 938px; height: 417px; position:relative; overflow: hidden; padding:0 21px; }
 .slider ul { list-style:none; list-style-position: outside; }
@@ -153,6 +167,18 @@ textarea { overflow: auto; }
 .footer-nav ul li a { color: #afaca9; }
 .footer-nav ul li a:hover { color: #878684; text-decoration: none; }
 .footer-nav ul li.last { border-right: 0; }
+/* Sub Menu */
+nav#navigation ul ul { display: none; }
+nav#navigation ul li:hover > ul { display: block; z-index: 1; }
+nav#navigation ul { position: relative; display: inline-table; }
+nav#navigation ul:after { clear: both; display: block; }			
+nav#navigation ul ul { background: url(images/body-pattern.png) repeat 0 0; border-radius: 3px; padding: 7px 7px; border: 1px solid #4a4a4a; text-decoration: none; position: absolute; top: 100%; }
+nav#navigation ul ul li { float: none; position: relative; }
+nav#navigation ul ul.sub-menu li a { color: #4a4a4a; background: url(images/body-pattern.png) repeat 0 0; padding: 0 7px; margin: 2px 0; display:block; border: 2px solid transparent; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; }
+nav#navigation ul ul li a:hover { border: 2px solid #6522CC; background: url(images/nav-btn.png) repeat-x 0 0; color:#fff; text-decoration: none; }
+nav#navigation ul ul ul { position: absolute; left: 100%; top:0; }
+
+
 
 #footer p.copy { font-size: 10px; color:#afaca9; line-height: 10px; float: right; }
 #footer p.copy a { font-size: 10px; color:#00acef;  line-height: 10px; text-decoration: underline; }

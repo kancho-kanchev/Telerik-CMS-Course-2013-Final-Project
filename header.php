@@ -40,13 +40,12 @@
 			</header>
 			<!-- end of header -->
 			<!-- navigaation -->
-			<nav id="navigation">
 				<?php wp_nav_menu(array (
 					'theme_location'  => 'top-side-menu',
 					'container'       => 'nav',
-					'menu_class'      => 'nav'
+					'menu_class'      => 'nav',
+					'container_id'		  => 'navigation'
 					)
 				);?>
 				<div class="cl">&nbsp;</div>
-			</nav>
 			<!-- end of navigation -->
