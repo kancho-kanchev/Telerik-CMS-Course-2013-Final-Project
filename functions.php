@@ -88,7 +88,33 @@ register_nav_menu('footer-menu', "Footer menu");
 			wp_enqueue_style('page-style');
 		}
 	}
+/*************************** add fields to user profile *******************/
+	add_action( 'show_user_profile', 'my_show_extra_profile_fields' );
+	add_action( 'edit_user_profile', 'my_show_extra_profile_fields' );
+	
+	function my_show_extra_profile_fields( $user ) { ?>
+	
+		<h3>Extra profile information</h3>
+		<table class="form-table">
+			<tr>
+				<th><label for="company_name">Company Name</label></th>
+				<td>
+					<input type="text" name="company_name" id="company_name" value="<?php echo esc_attr( get_the_author_meta( 'company_name', $user->ID ) ); ?>" class="regular-text" /><br />
+					<span class="description">Please enter your company name.</span>
+				</td>
+			</tr>
+		</table>
+	<?php }
 
+	add_action( 'personal_options_update', 'my_save_extra_profile_fields' );
+	add_action( 'edit_user_profile_update', 'my_save_extra_profile_fields' );
+	
+	function my_save_extra_profile_fields( $user_id ) {
+		if ( !current_user_can( 'edit_user', $user_id ) )
+			return false;
+		update_usermeta( $user_id, 'company_name', $_POST['company_name'] );
+	}
+	
 /*************************** theme options page ***************************/
 		
 /**
