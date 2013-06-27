@@ -40,7 +40,6 @@
 				<p>Sorry, but you are looking for something that isn't here.</p>
 	<?php //include (TEMPLATEPATH . "/searchform.php"); ?>
 <?php endif; ?>
-
 						</article>
 					</div>
 					<div class="col">

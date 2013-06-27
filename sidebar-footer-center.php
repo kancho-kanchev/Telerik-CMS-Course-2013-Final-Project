@@ -15,6 +15,8 @@
 	if(isset($options['sidebar_footer_center_cat'])&&($options['sidebar_footer_center_cat']!='')) :
 		query_posts( 'category_name='.$options['sidebar_footer_center_cat'] );
 		if(have_posts()) :
+			global $more;
+			$more = 0;
 			the_post(); ?>
 			<h3><?php if(isset($options['sidebar_footer_center_title'])&&($options['sidebar_footer_center_title']!='')){ echo esc_attr( $options['sidebar_footer_center_title'] );} ?></h3>
 			<h5><?php the_title();?></h5>
