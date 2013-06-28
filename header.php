@@ -44,7 +44,7 @@
 					'theme_location'  => 'top-side-menu',
 					'container'       => 'nav',
 					'menu_class'      => 'nav',
-					'container_id'		  => 'navigation'
+					'container_id'	  => 'navigation'
 					)
 				);?>
 				<div class="cl">&nbsp;</div>

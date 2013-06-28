@@ -84,6 +84,24 @@ function telerik_theme_options_render_page() {
 		<h3>Front page</h3>
 		<table>
 			<tr>
+				<td scope="row" align="left"><label for="theme_settings[ads]"><?php _e( 'Advertisement' ); ?></label></td>
+				<td>
+					<textarea id="theme_settings[ads]" rows="4" cols="50" name="theme_settings[ads]"><?php if(isset($options['ads'])) {  esc_attr_e ( $options['ads'] ); } ?></textarea>
+				</td>
+				<td scope="row" align="left">(for strong words use html "strong" tag)</td>
+			</tr>
+			<tr>
+				<td scope="row" align="left"><label for="theme_settings[ads_button]"><?php _e( 'Text in button' ); ?></label></td>
+				<td><input id="theme_settings[ads_button]" type="text" size="25" name="theme_settings[ads_button]"
+					value="<?php if(isset($options['ads_button'])) { esc_attr_e ( $options['ads_button'] );} ?>" /></td>
+			</tr>
+			<tr>
+				<td scope="row" align="left"><label for="theme_settings[ads_button_link]"><?php _e( 'Link' ); ?></label></td>
+				<td><input id="theme_settings[ads_button_link]" type="text" size="25" name="theme_settings[ads_button_link]"
+					value="<?php if(isset($options['ads_button_link'])) { esc_attr_e ( $options['ads_button_link'] );} ?>" /></td>
+			</tr>
+			<tr><td><br/></td></tr>
+			<tr>
 				<td scope="row" align="left"><label for="theme_settings[sidebar_left_cat]"><?php _e( 'Left sidebar category' ); ?></label></td>
 				<td><input id="theme_settings[sidebar_left_cat]" type="text" size="25" name="theme_settings[sidebar_left_cat]" 
 					value="<?php if(isset($options['sidebar_left_cat'])) {  esc_attr_e ( $options['sidebar_left_cat'] );} ?>" /></td>
@@ -178,6 +196,30 @@ function telerik_theme_options_render_page() {
 				<td scope="row" align="left"><label for="theme_settings[sidebar_footer_right_title2]"><?php _e( 'Title' ); ?></label></td>
 				<td><input id="theme_settings[sidebar_footer_right_title2]" type="text" size="25" name="theme_settings[sidebar_footer_right_title2]"
 					value="<?php if(isset($options['sidebar_footer_right_title2'])) { esc_attr_e( $options['sidebar_footer_right_title2'] );} ?>" /></td>
+			</tr>
+			<tr><td><br/></td></tr>
+			<tr>
+				<td scope="row" align="left"><label for="theme_settings[copyright_year]"><?php _e( 'copyright year' ); ?></label></td>
+				<td><input id="theme_settings[copyright_year]" type="text" size="25" name="theme_settings[copyright_year]"
+					value="<?php if(isset($options['copyright_year'])) { esc_attr_e( $options['copyright_year'] );} ?>" /></td>
+				<td scope="row" align="left">(example "2012" or 2012-2013")</td>
+			</tr>
+			<tr>
+				<td scope="row" align="left"><label for="theme_settings[copyright_owner]"><?php _e( 'copyright owner' ); ?></label></td>
+				<td><input id="theme_settings[copyright_owner]" type="text" size="25" name="theme_settings[copyright_owner]"
+					value="<?php if(isset($options['copyright_owner'])) { esc_attr_e( $options['copyright_owner'] );} ?>" /></td>
+			</tr>
+			<tr><td><br/></td></tr>
+			<tr>
+				<td scope="row" align="left"><label for="theme_settings[design_name]"><?php _e( 'Design by' ); ?></label></td>
+				<td><input id="theme_settings[design_name]" type="text" size="25" name="theme_settings[design_name]"
+					value="<?php if(isset($options['design_name'])) { esc_attr_e( $options['design_name'] );} ?>" /></td>
+				<td scope="row" align="left">(name)</td>
+			</tr>
+			<tr>
+				<td scope="row" align="left"><label for="theme_settings[design_link]"><?php _e( 'link' ); ?></label></td>
+				<td><input id="theme_settings[design_link]" type="text" size="25" name="theme_settings[design_link]"
+					value="<?php if(isset($options['design_link'])) { esc_attr_e( $options['design_link'] );} ?>" /></td>
 			</tr>
 		</table>
 		<hr />

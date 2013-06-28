@@ -163,22 +163,20 @@ nav#navigation ul ul ul { position: absolute; left: 100%; top:0; }
 #footer { background: url(images/footer-border.png) repeat-x 0 0; padding: 18px 20px 18px 10px; }
 .footer-nav { float: left; }
 .footer-nav ul { list-style:none; list-style-position: outside; }
-.footer-nav ul li { float: left; border-right: 1px solid #afaca9;  padding:0 10px; font-size: 10px; line-height: 10px; }
-.footer-nav ul li a { color: #afaca9; }
+.footer-nav ul li { float: left; border-right: 1px solid #afaca9;  padding:0; margin: 0; font-size: 10px; line-height: 10px; }
+.footer-nav ul li a { color: #afaca9; padding:0 10px;}
 .footer-nav ul li a:hover { color: #878684; text-decoration: none; }
 .footer-nav ul li.last { border-right: 0; }
 /* Sub Menu */
-nav#navigation ul ul { display: none; }
-nav#navigation ul li:hover > ul { display: block; z-index: 1; }
-nav#navigation ul { position: relative; display: inline-table; }
-nav#navigation ul:after { clear: both; display: block; }			
-nav#navigation ul ul { background: url(images/body-pattern.png) repeat 0 0; border-radius: 3px; padding: 7px 7px; border: 1px solid #4a4a4a; text-decoration: none; position: absolute; top: 100%; }
-nav#navigation ul ul li { float: none; position: relative; }
-nav#navigation ul ul.sub-menu li a { color: #4a4a4a; background: url(images/body-pattern.png) repeat 0 0; padding: 0 7px; margin: 2px 0; display:block; border: 2px solid transparent; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; }
-nav#navigation ul ul li a:hover { border: 2px solid #6522CC; background: url(images/nav-btn.png) repeat-x 0 0; color:#fff; text-decoration: none; }
-nav#navigation ul ul ul { position: absolute; left: 100%; top:0; }
-
-
+.footer-nav ul ul { display: none; bottom: 10px; }
+.footer-nav ul li:hover > ul { display: block; z-index: 1; }
+.footer-nav ul { position: absolute; display: inline-table; }
+.footer-nav ul:after { clear: both; display: block; }
+.footer-nav ul ul { background: #e8e8e8; padding: 5px 0 0 0; margin: 0; border: 1px solid #afaca9; text-decoration: none; position: absolute; }
+.footer-nav ul ul li { float: none; position: relative; border: 0; padding: 0; margin: 0; }
+.footer-nav ul ul.sub-menu li a { color: #afaca9; background: #e8e8e8; padding: 0 10px 5px 10px; margin: 0; display:block; }
+.footer-nav ul ul li a:hover { background: #e8e8e8; color:#878684; text-decoration: none; }
+.footer-nav ul ul ul { position: absolute; left: 100%; bottom:0; }
 
 #footer p.copy { font-size: 10px; color:#afaca9; line-height: 10px; float: right; }
 #footer p.copy a { font-size: 10px; color:#00acef;  line-height: 10px; text-decoration: underline; }

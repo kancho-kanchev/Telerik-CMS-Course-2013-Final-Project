@@ -26,16 +26,49 @@
 			
 			<!-- footer -->
 			<div id="footer">
-				<div class="footer-nav">
 				<?php wp_nav_menu(array (
 					'theme_location'  => 'footer-menu',
-					'container'       => '',
-					'menu_class'      => ''
+					'container'       => 'div',
+					'container_class' => 'footer-nav'
 					)
 				);?>
 					<div class="cl">&nbsp;</div>
-				</div>
-				<p class="copy">&copy; Copyright 2012<span>|</span>Telerik CMS Course. Design by <a href="http://academy.telerik.com" target="_blank">Telerik Software Academy</a></p>
+<?php
+//get theme options
+$options = get_option( 'theme_settings' );
+?>
+				<p class="copy"><?php
+				 
+if((isset($options['copyright_year'])&&($options['copyright_year']!='')||(isset($options['copyright_owner'])&&($options['copyright_owner']!='')))) :
+	_e( '&copy; Copyright ' );
+	if((isset($options['copyright_year'])&&($options['copyright_year']!='')&&(isset($options['copyright_owner'])&&($options['copyright_owner']!='')))){
+		_e( $options['copyright_year'].'<span>|</span>'.$options['copyright_owner'].'. ' );
+	}
+	else {
+		if(isset($options['copyright_year'])&&($options['copyright_year']!='')){
+			_e( $options['copyright_year'].'. ' );
+		}
+		else {
+			_e( $options['copyright_owner'].'. ' );
+		}
+	}
+endif;
+if((isset($options['design_name'])&&($options['design_name']!='')||(isset($options['design_link'])&&($options['design_link']!='')))) :
+	_e( 'Design by ' );
+	if((isset($options['design_name'])&&($options['design_name']!='')&&(isset($options['design_link'])&&($options['design_link']!='')))) {
+		_e( '<a href="'.$options['design_link'].'" target="_blank">'.$options['design_name'].'</a>' );
+	}
+	else {
+		if (isset($options['design_name'])&&($options['design_name']!='')) {
+			_e( $options['design_name'] );
+		}
+		else {
+			_e( '<a href="'.$options['design_link'].'" target="_blank">'.$options['design_link'].'</a>' );
+		}
+	}
+endif;
+
+					?></p>
 				<div class="cl">&nbsp;</div>
 			</div>
 			<!-- end of footer -->
