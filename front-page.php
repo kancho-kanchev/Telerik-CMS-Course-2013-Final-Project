@@ -126,8 +126,28 @@
 			<div class="main">
 
 				<div class="featured">
-					<h4>Welcome to <strong>Company Name.</strong> Start Creating Your Website Today completely for <strong>FREE!</strong></h4>
-					<a href="#" class="blue-btn">GET IN TOUCH</a>
+<?php
+//get theme options
+$options = get_option( 'theme_settings' );
+_e( '<h4>' );
+if(isset($options['ads'])&&($options['ads']!='')){
+	_e( $options['ads'] );
+}
+_e( '</h4>' );
+if((isset($options['ads_button'])&&($options['ads_button']!='')||(isset($options['ads_button_link'])&&($options['ads_button_link']!='')))) :
+	if((isset($options['ads_button'])&&($options['ads_button']!='')&&(isset($options['ads_button_link'])&&($options['ads_button_link']!='')))) {
+		_e( '<a href="'.$options['ads_button_link'].'" class="blue-btn">'.$options['ads_button'].'</a>' );
+	}
+	else {
+		if (isset($options['ads_button'])&&($options['ads_button']!='')) {
+			_e( '<a href="#" class="blue-btn">'.$options['ads_button'].'</a>' );
+		}
+		else {
+			_e( '<a href="'.$options['ads_button_link'].'" class="blue-btn">'.$options['ads_button_link'].'</a>' );
+		}
+	}
+endif;
+?>			
 				</div>
 
 				<section class="cols">
