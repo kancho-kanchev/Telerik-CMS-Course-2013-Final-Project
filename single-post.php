@@ -20,7 +20,7 @@
 							<header>
 								<h1><?php the_title(); ?></h1>
 							</header>
-							<p class="meta"><strong>by: <?php the_author_posts_link(); ?> /  <?php the_category(', ') ?></strong></p>
+							<p class="meta"><strong>by: <?php the_author_posts_link(); ?> in <?php the_category(', ') ?></strong></p>
 							<br />
 		<?php the_content(); ?>
 				<br />
