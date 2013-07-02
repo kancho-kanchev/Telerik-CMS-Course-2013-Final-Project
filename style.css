@@ -44,11 +44,11 @@ textarea { overflow: auto; }
 .container { background: url(images/container.png) repeat-y center 0; box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.05); -moz-box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.05); -webkit-box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.05); -o-box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.05);  }
 
 
-#header { margin-bottom: 15px;  position: relative; padding-top: 25px;  height: 43px; background: url(images/border-title.png) repeat-x 0 bottom; }
-#logo { width: 100%; position:absolute; top: 23px; left: 21px; display: block; font-size: 2em; font-weight: bold; }
+#header { margin-bottom: 15px;  position: relative; padding-top: 25px; background: url(images/border-title.png) repeat-x 0 bottom; }
+#logo { width: 100%; position:relative; left: 21px;  font-size: 2em; font-weight: bold; }
 /*#logo a { height: 26px; display: block; background: url(images/logo.jpg) no-repeat 0 0; text-indent: -4000px; }*/
-#logo a { height: 26px; display: block; }
-.search { width: 210px; margin-left: auto; padding-right: 21px; }
+#logo a { display: block; }
+.search { width: 210px; margin-left: auto; padding-right: 21px; padding-bottom: 10px; }
 .search input.field { float:left; width: 166px; padding:0 8px; height: 24px; line-height: 24px;  border: 1px solid #d3d3d3; font-size: 11px; color:#bebebe; background: #ededed; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; }
 .search input.search-btn { float:left;  font-size: 0; line-height: 0; text-indent: -4000px; cursor: pointer; width: 20px; height: 26px; border: 0; background: url(images/search-ico.png) no-repeat 0 0; }
 
