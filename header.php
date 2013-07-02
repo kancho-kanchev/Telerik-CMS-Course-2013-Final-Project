@@ -26,7 +26,7 @@
 		<div class="container">
 			<!-- header -->
 			<header id="header">
-				<h1 id="logo"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+				<div id="logo"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></div>
 				<!-- search -->
 				<div class="search">
 					<form action="" method="post">

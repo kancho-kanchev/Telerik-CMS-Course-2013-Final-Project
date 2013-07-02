@@ -16,10 +16,15 @@
 				<!-- slider -->
 				<div class="slider">
 					<div class="socials">
-						<a href="#" class="facebook-ico">facebook-ico</a>
-						<a href="#" class="twitter-ico">twitter-ico</a>
-						<a href="#" class="skype-ico">skype-ico</a>
-						<a href="#" class="rss-ico">rss-ico</a>
+<?php 
+//get theme options
+$options = get_option( 'theme_settings' );
+if(isset($options['fb'])&&($options['fb']!='')) echo '						<a href="'.$options['fb'].'" class="facebook-ico">facebook-ico</a>'."\n";
+if(isset($options['tw'])&&($options['tw']!='')) echo '						<a href="'.$options['tw'].'" class="twitter-ico">twitter-ico</a>'."\n";
+if(isset($options['go'])&&($options['go']!='')) echo '						<a href="'.$options['go'].'" class="google-ico">google-ico</a>'."\n";
+if(isset($options['sk'])&&($options['sk']!='')) echo '						<a href="'.$options['sk'].'" class="skype-ico">skype-ico</a>'."\n";
+if(isset($options['rss'])&&($options['rss']!='')) echo '						<a href="'.$options['rss'].'" class="rss-ico">rss-ico</a>'."\n";
+?>
 						<div class="cl">&nbsp;</div>
 					</div>
 
@@ -29,77 +34,108 @@
 					</div>
 
 					<ul>
-						<li id="img1">
-							<div class="slide-cnt">
-								<h4>Heading Title Goes</h4>
-								<h2>Just Like That</h2>
-								<p>Acor porta mi, non venenatis augue imperdiet quis. Nam faucibus, felis ut suscipit vulputate, tortor quam ultricies neque, eget dignissim elit urna a metus. Aliquam sed quam dui, id lacinia nunc. <a href="#">read more</a></p>
-							</div>
-							<img src="<?php echo get_template_directory_uri() ?>/images/slider-header.png" alt="" />
-						</li>
+	
+<?php
+$args = array(
+		'posts_per_page' => 8,
+		'post__in'  => get_option( 'sticky_posts' ),
+		'ignore_sticky_posts' => 1
+);
+query_posts( $args );
 
-						<li id="img2">
+if (have_posts()) :
+	$count=0;
+	while (have_posts()) :
+		the_post();
+		$count++;
+		echo ('						<li id="img'.$count.'">'."\n");
+?>
 							<div class="slide-cnt">
-								<h4>Heading Title Goes</h4>
-								<h2>Just Like That</h2>
-								<p>Acor porta mi, non venenatis augue imperdiet quis. Nam faucibus, felis ut suscipit vulputate, tortor quam ultricies neque, eget dignissim elit urna a metus. Aliquam sed quam dui, id lacinia nunc. <a href="#">read more</a></p>
-							</div>
-							<img src="<?php echo get_template_directory_uri() ?>/images/slider-header.png" alt="" />
-						</li>
+								<h4></h4>
+								<h2><?php the_title(); ?></h2>
+								<p><?php
+		$myExcerpt = get_the_excerpt();
+		$tags = array("<p>", "</p>", "[...]");
+		$myExcerpt = str_replace($tags, "", $myExcerpt);
+		echo $myExcerpt."\n";
+		echo '								<a href="';
+		echo the_permalink();
+		echo '">read more</a></p>'."\n";
+		echo '							</div>'."\n";
+		if (catch_that_image() != '') {
+			echo '							<img src="'.catch_that_image().'" alt="'.get_the_title().'" />'."\n";
+		}
+		echo '						</li>'."\n";
 
-						<li id="img3">
-							<div class="slide-cnt">
-								<h4>Heading Title Goes</h4>
-								<h2>Just Like That</h2>
-								<p>Acor porta mi, non venenatis augue imperdiet quis. Nam faucibus, felis ut suscipit vulputate, tortor quam ultricies neque, eget dignissim elit urna a metus. Aliquam sed quam dui, id lacinia nunc. <a href="#">read more</a></p>
-							</div>
-							<img src="<?php echo get_template_directory_uri() ?>/images/slider-header.png" alt="" />
-						</li>
-
-						<li id="img4">
-							<div class="slide-cnt">
-								<h4>Heading Title Goes</h4>
-								<h2>Just Like That</h2>
-								<p>Acor porta mi, non venenatis augue imperdiet quis. Nam faucibus, felis ut suscipit vulputate, tortor quam ultricies neque, eget dignissim elit urna a metus. Aliquam sed quam dui, id lacinia nunc. <a href="#">read more</a></p>
-							</div>
-							<img src="<?php echo get_template_directory_uri() ?>/images/slider-header.png" alt="" />
-						</li>
-
-						<li id="img5">
-							<div class="slide-cnt">
-								<h4>Heading Title Goes</h4>
-								<h2>Just Like That</h2>
-								<p>Acor porta mi, non venenatis augue imperdiet quis. Nam faucibus, felis ut suscipit vulputate, tortor quam ultricies neque, eget dignissim elit urna a metus. Aliquam sed quam dui, id lacinia nunc. <a href="#">read more</a></p>
-							</div>
-							<img src="<?php echo get_template_directory_uri() ?>/images/slider-header.png" alt="" />
-						</li>
-
-						<li id="img6">
-							<div class="slide-cnt">
-								<h4>Heading Title Goes</h4>
-								<h2>Just Like That</h2>
-								<p>Acor porta mi, non venenatis augue imperdiet quis. Nam faucibus, felis ut suscipit vulputate, tortor quam ultricies neque, eget dignissim elit urna a metus. Aliquam sed quam dui, id lacinia nunc. <a href="#">read more</a></p>
-							</div>
-							<img src="<?php echo get_template_directory_uri() ?>/images/slider-header.png" alt="" />
-						</li>
-
-						<li id="img7">
-							<div class="slide-cnt">
-								<h4>Heading Title Goes</h4>
-								<h2>Just Like That</h2>
-								<p>Acor porta mi, non venenatis augue imperdiet quis. Nam faucibus, felis ut suscipit vulputate, tortor quam ultricies neque, eget dignissim elit urna a metus. Aliquam sed quam dui, id lacinia nunc. <a href="#">read more</a></p>
-							</div>
-							<img src="<?php echo get_template_directory_uri() ?>/images/slider-header.png" alt="" />
-						</li>
-
-						<li id="img8">
-							<div class="slide-cnt">
-								<h4>Heading Title Goes</h4>
-								<h2>Just Like That</h2>
-								<p>Acor porta mi, non venenatis augue imperdiet quis. Nam faucibus, felis ut suscipit vulputate, tortor quam ultricies neque, eget dignissim elit urna a metus. Aliquam sed quam dui, id lacinia nunc. <a href="#">read more</a></p>
-							</div>
-							<img src="<?php echo get_template_directory_uri() ?>/images/javascript-ninja.png" alt="" />
-						</li>
+		switch ($count) {
+			case 1:
+				if ( has_post_thumbnail() ) {
+					$img1 = get_the_post_thumbnail();
+				}
+				else {
+					$img1 = '<img src="'.catch_that_image().'" alt="'.get_the_title().'" />';
+				}
+				break;
+			case 2:
+				if ( has_post_thumbnail() ) {
+					$img2 = get_the_post_thumbnail();
+				}
+				else {
+					$img2 = '<img src="'.catch_that_image().'" alt="'.get_the_title().'" />';
+				}
+				break;
+			case 3:
+				if ( has_post_thumbnail() ) {
+					$img3 = get_the_post_thumbnail();
+				}
+				else {
+					$img3 = '<img src="'.catch_that_image().'" alt="'.get_the_title().'" />';
+				}
+				break;
+			case 4:
+				if ( has_post_thumbnail() ) {
+					$img4 = get_the_post_thumbnail();
+				}
+				else {
+					$img4 = '<img src="'.catch_that_image().'" alt="'.get_the_title().'" />';
+				}
+				break;
+			case 5:
+						if ( has_post_thumbnail() ) {
+					$img5 = get_the_post_thumbnail();
+				}
+				else {
+					$img5 = '<img src="'.catch_that_image().'" alt="'.get_the_title().'" />';
+				}
+				break;
+			case 6:
+						if ( has_post_thumbnail() ) {
+					$img6 = get_the_post_thumbnail();
+				}
+				else {
+					$img6 = '<img src="'.catch_that_image().'" alt="'.get_the_title().'" />';
+				}
+				break;
+			case 7:
+						if ( has_post_thumbnail() ) {
+					$img7 = get_the_post_thumbnail();
+				}
+				else {
+					$img7 = '<img src="'.catch_that_image().'" alt="'.get_the_title().'" />';
+				}
+				break;
+			case 8:
+						if ( has_post_thumbnail() ) {
+					$img8 = get_the_post_thumbnail();
+				}
+				else {
+					$img8 = '<img src="'.catch_that_image().'" alt="'.get_the_title().'" />';
+				}
+				break;
+		}
+	endwhile;
+endif;
+?>
 					</ul>
 				</div>
 				<!-- end of slider -->
@@ -107,14 +143,16 @@
 				<!-- thumbs -->
 				<div id="thumbs-wrapper">
 					<div id="thumbs">
-						<a href="#img1" class="selected"><img src="<?php echo get_template_directory_uri() ?>/images/javascript-ninja.png"/></a>
-						<a href="#img2"><img src="<?php echo get_template_directory_uri() ?>/images/javascript-ninja.png" /></a>
-						<a href="#img3"><img src="<?php echo get_template_directory_uri() ?>/images/javascript-ninja.png" /></a>
-						<a href="#img4"><img src="<?php echo get_template_directory_uri() ?>/images/javascript-ninja.png" /></a>
-						<a href="#img5"><img src="<?php echo get_template_directory_uri() ?>/images/javascript-ninja.png" /></a>
-						<a href="#img6"><img src="<?php echo get_template_directory_uri() ?>/images/javascript-ninja.png" /></a>
-						<a href="#img7"><img src="<?php echo get_template_directory_uri() ?>/images/javascript-ninja.png" /></a>
-						<a href="#img8"><img src="<?php echo get_template_directory_uri() ?>/images/javascript-ninja.png" /></a>
+<?php
+if (isset($img1)) echo '						<a href="#img1" class="selected">'.$img1.'</a>'."\n";
+if (isset($img2)) echo '						<a href="#img2">'.$img2.'</a>'."\n";
+if (isset($img3)) echo '						<a href="#img3">'.$img3.'</a>'."\n";
+if (isset($img4)) echo '						<a href="#img4">'.$img4.'</a>'."\n";
+if (isset($img5)) echo '						<a href="#img5">'.$img5.'</a>'."\n";
+if (isset($img6)) echo '						<a href="#img6">'.$img6.'</a>'."\n";
+if (isset($img7)) echo '						<a href="#img7">'.$img7.'</a>'."\n";
+if (isset($img8)) echo '						<a href="#img8">'.$img8.'</a>'."\n";
+?>
 					</div>
 					<a id="prev" href="#"></a>
 					<a id="next" href="#"></a>
@@ -124,11 +162,8 @@
 
 			<!-- main -->
 			<div class="main">
-
 				<div class="featured">
 <?php
-//get theme options
-$options = get_option( 'theme_settings' );
 _e( '<h4>' );
 if(isset($options['ads'])&&($options['ads']!='')){
 	_e( $options['ads'] );

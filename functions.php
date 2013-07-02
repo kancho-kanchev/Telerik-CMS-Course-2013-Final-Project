@@ -7,6 +7,36 @@
  * @subpackage kanchev-bgdotcom
  * @since Project 2 v.1.0
  */
+/**
+ * Edit read more link in excerpt
+ */
+//function new_excerpt_more( $more ) {
+//	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Read More</a>';
+//}
+//add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+/**
+ * Get URL of first image in a post
+ */
+function catch_that_image() {
+	global $post, $posts;
+	$first_img = '';
+	ob_start();
+	ob_end_clean();
+	$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+	if(isset($matches [1] [0])){
+		$first_img = $matches [1] [0];
+		// no image found display default image instead
+		if(empty($first_img)){
+			//$first_img = "/images/default.jpg";
+			$first_img = '';
+		}
+	}
+	else {
+		$first_img = '';
+	}
+	return $first_img;
+}
 
 /**
  * Enable featured image.

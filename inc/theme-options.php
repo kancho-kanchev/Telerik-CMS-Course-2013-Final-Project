@@ -224,6 +224,33 @@ function telerik_theme_options_render_page() {
 		</table>
 		<hr />
 		<h3>Данни за контакти:</h3>
+		<table>
+			<tr>
+				<td scope="row" align="left"><label for="theme_settings[fb]"><?php _e( 'Facebook' ); ?></label></td>
+				<td><input id="theme_settings[fb]" type="text" size="25" name="theme_settings[fb]"
+					value="<?php if(isset($options['fb'])) { esc_attr_e( $options['fb'] );} ?>" /></td>
+			</tr>
+			<tr>
+				<td scope="row" align="left"><label for="theme_settings[tw]"><?php _e( 'Twitter' ); ?></label></td>
+				<td><input id="theme_settings[tw]" type="text" size="25" name="theme_settings[tw]"
+					value="<?php if(isset($options['tw'])) { esc_attr_e( $options['tw'] );} ?>" /></td>
+			</tr>
+			<tr>
+				<td scope="row" align="left"><label for="theme_settings[go]"><?php _e( 'Google +' ); ?></label></td>
+				<td><input id="theme_settings[go]" type="text" size="25" name="theme_settings[go]"
+					value="<?php if(isset($options['go'])) { esc_attr_e( $options['go'] );} ?>" /></td>
+			</tr>
+			<tr>
+				<td scope="row" align="left"><label for="theme_settings[sk]"><?php _e( 'Skype' ); ?></label></td>
+				<td><input id="theme_settings[sk]" type="text" size="25" name="theme_settings[sk]"
+					value="<?php if(isset($options['sk'])) { esc_attr_e( $options['sk'] );} ?>" /></td>
+			</tr>
+			<tr>
+				<td scope="row" align="left"><label for="theme_settings[rss]"><?php _e( 'rss' ); ?></label></td>
+				<td><input id="theme_settings[rss]" type="text" size="25" name="theme_settings[rss]"
+					value="<?php if(isset($options['rss'])) { esc_attr_e( $options['rss'] );} ?>" /></td>
+			</tr>
+		</table>
 		<hr />
 		<?php submit_button(); ?>
 	</form>
