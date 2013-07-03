@@ -26,15 +26,15 @@
 		<div class="container">
 			<!-- header -->
 			<header id="header">
-				<div id="logo"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></div>
+				<span id="logo"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></span>
 				<!-- search -->
-				<div class="search">
+				<span class="search">
 					<form action="" method="post">
 						<input type="text" class="field" value="keywords here ..." title="keywords here ..." />
 						<input type="submit" class="search-btn" value="" />
 						<div class="cl">&nbsp;</div>
 					</form>
-				</div>
+				</span>
 				<!-- end of search -->
 				<div class="cl">&nbsp;</div>
 			</header>
