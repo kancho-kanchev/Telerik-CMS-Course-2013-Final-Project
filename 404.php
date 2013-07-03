@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the error 404 page.
+ * The template for displaying 404 pages (Not Found).
  *
  *
  * @package The 2013 Final Project for CMS course
@@ -12,16 +12,25 @@
 <!-- ******** error 404 ******** -->
 			<!-- main -->
 			<div class="main">
-<div id="site_content">
-	<div class="content">
-		<h1 class="center"><strong>404</strong></h1>
-		<h2 class="center">Error Four Oh Four - Page Not Found</h2>
-		<h4>Wooah you have tried to access a page which doesn't exist or has been moved. You have a few options:</h4>
-		<h4>* Send me an e-mail and I will look into the error.</h4>
-		<h4>* Go back to the homepage and take a look at my portfolio.</h4>
-		<p></p>
-		<h3>Press any link to continue...</h3>
-		<h4><a href="<?php echo home_url(); ?>">Home</a>, <a href="http://kanchev-bg.com">Contact Me</a></h4>
-	</div>
-</div>
+				<section class="cols">
+					<div class="col-span-2">
+						<article>
+							<div id="site_content">
+								<div class="featured">
+									<h4 align="center"><strong>404</strong></h4>
+									<a href="<?php echo home_url(); ?>" class="blue-btn">Go to home page</a>
+									<p>Error Four Oh Four - Page Not Found</p>
+									<hr>
+									<p>Wooah you have tried to access a page which doesn't exist or has been moved.</p>
+									<p>Please check the spelling of the address bar, and if you think there is an error on the site please let us know</p>
+									<a href="<?php echo home_url(); ?>" class="more-link">contacts us</a>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="col">
+<?php get_sidebar('sidebar-right'); ?>
+					</div>
+					<div class="cl"></div>
+				</section>
 <?php get_footer(); ?>
