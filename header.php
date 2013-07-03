@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="content-type" content="text/html; charset="<?php bloginfo( 'charset' ); ?>" />
 	<title><?php bloginfo('description'); ?> - <?php bloginfo('name'); ?></title>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo("stylesheet_url"); ?>" />
 	<?php wp_head(); ?>
@@ -29,11 +29,7 @@
 				<span id="logo"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></span>
 				<!-- search -->
 				<span class="search">
-					<form action="" method="post">
-						<input type="text" class="field" value="keywords here ..." title="keywords here ..." />
-						<input type="submit" class="search-btn" value="" />
-						<div class="cl">&nbsp;</div>
-					</form>
+					<?php get_search_form(); ?>
 				</span>
 				<!-- end of search -->
 				<div class="cl">&nbsp;</div>
