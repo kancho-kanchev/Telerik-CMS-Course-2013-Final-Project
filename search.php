@@ -15,8 +15,6 @@
 				<section class="cols">
 					<div class="col-span-2">
 						<article>
-						<!-- Добавих anchor към заглавието за да може да се отваря статията в нов прозорец.
-							По този начин се променя цвета на заглавието спрямо темплейта, но е много по функционално. -->
 <?php if (have_posts()) : ?>
 
 							<h1 class="page-title"><?php printf( __( 'Search Results for: %s'), '<span>' . get_search_query() . '</span>' ); ?></h1>

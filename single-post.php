@@ -26,6 +26,8 @@
 				<br />
 		<?php the_tags( '<p class="meta"><strong>Tags: ', ', ', '</strong></p>'); ?>
 				<hr>
+				<br/>
+				<?php comments_template('', true); ?>
 	<?php endwhile; ?>
 				<div class="navigation">
 					<div class="alignleft">
