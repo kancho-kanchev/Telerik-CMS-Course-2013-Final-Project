@@ -23,7 +23,7 @@
 									<hr>
 									<p>Wooah you have tried to access a page which doesn't exist or has been moved.</p>
 									<p>Please check the spelling of the address bar, and if you think there is an error on the site please let us know</p>
-									<a href="<?php echo home_url(); ?>" class="more-link">contacts us</a>
+									<a href="<?php echo home_url().'/contacts/'; ?>" class="more-link">contacts us</a>
 								</div>
 							</div>
 						</article>

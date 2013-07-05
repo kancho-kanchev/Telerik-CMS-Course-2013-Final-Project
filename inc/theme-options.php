@@ -223,7 +223,7 @@ function telerik_theme_options_render_page() {
 			</tr>
 		</table>
 		<hr />
-		<h3>Данни за контакти:</h3>
+		<h3>Contacts:</h3>
 		<table>
 			<tr>
 				<td scope="row" align="left"><label for="theme_settings[fb]"><?php _e( 'Facebook' ); ?></label></td>
@@ -249,6 +249,26 @@ function telerik_theme_options_render_page() {
 				<td scope="row" align="left"><label for="theme_settings[rss]"><?php _e( 'rss' ); ?></label></td>
 				<td><input id="theme_settings[rss]" type="text" size="25" name="theme_settings[rss]"
 					value="<?php if(isset($options['rss'])) { esc_attr_e( $options['rss'] );} ?>" /></td>
+			</tr>
+			<tr><td><br/></td></tr>
+			<tr>
+				<td scope="row" align="left"><label for="theme_settings[contact_text_one]"><?php _e( 'Contact text before e-mail' ); ?></label></td>
+				<td>
+					<textarea id="theme_settings[contact_text_one]" rows="4" cols="50" name="theme_settings[contact_text_one]"><?php if(isset($options['contact_text_one'])) {  esc_attr_e ( $options['contact_text_one'] ); } ?></textarea>
+				</td>
+				<td scope="row" align="left">(for strong words use html "strong" tag)</td>
+			</tr>
+			<tr>
+				<td scope="row" align="left"><label for="theme_settings[contact_email]"><?php _e( 'e-mail' ); ?></label></td>
+				<td><input id="theme_settings[contact_email]" type="text" size="25" name="theme_settings[contact_email]"
+					value="<?php if(isset($options['contact_email'])) { esc_attr_e ( $options['contact_email'] );} ?>" /></td>
+			</tr>
+			<tr>
+				<td scope="row" align="left"><label for="theme_settings[contact_text_two]"><?php _e( 'Contact text after e-mail' ); ?></label></td>
+				<td>
+					<textarea id="theme_settings[contact_text_two]" rows="4" cols="50" name="theme_settings[contact_text_two]"><?php if(isset($options['contact_text_two'])) {  esc_attr_e ( $options['contact_text_two'] ); } ?></textarea>
+				</td>
+				<td scope="row" align="left">(for strong words use html "strong" tag<br/>use max width="286")</td>
 			</tr>
 		</table>
 		<hr />

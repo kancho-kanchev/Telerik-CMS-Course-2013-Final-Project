@@ -19,12 +19,14 @@
 							По този начин се променя цвета на заглавието спрямо темплейта, но е много по функционално. -->
 <?php if (have_posts()) : ?>
 	<?php while (have_posts()) : the_post(); ?>
+						<div>
 							<header>
 								<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 							</header>
 		<?php the_content('view more'); ?>
 		<?php //wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 				<br />
+				</div>
 				<hr>
 	<?php endwhile; ?>
 				<div class="navigation">
@@ -38,7 +40,6 @@
 	<?php else : ?>
 				<h1>Not Found!</h1>
 				<p>Sorry, but you are looking for something that isn't here.</p>
-	<?php //include (TEMPLATEPATH . "/searchform.php"); ?>
 <?php endif; ?>
 						</article>
 					</div>					
@@ -47,7 +48,5 @@
 					</div>
 					<div class="cl"></div>
 				</section>
-
-			
 <!-- ******** end content ******** -->
 <?php get_footer(); ?>
