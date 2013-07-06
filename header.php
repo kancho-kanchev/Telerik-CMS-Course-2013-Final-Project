@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta charset = "<?php bloginfo( 'charset' ); ?>" />
 	<title><?php bloginfo('description'); ?> - <?php bloginfo('name'); ?></title>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo("stylesheet_url"); ?>" />
 	<?php wp_head(); ?>
