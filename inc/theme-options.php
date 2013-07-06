@@ -86,9 +86,13 @@ function telerik_theme_options_render_page() {
 			<tr>
 				<td scope="row" align="left"><label for="theme_settings[ads]"><?php _e( 'Advertisement' ); ?></label></td>
 				<td>
-					<textarea id="theme_settings[ads]" rows="4" cols="50" name="theme_settings[ads]"><?php if(isset($options['ads'])) {  esc_attr_e ( $options['ads'] ); } ?></textarea>
+					<table>
+						<tr>
+							<td><textarea id="theme_settings[ads]" rows="4" cols="50" name="theme_settings[ads]"><?php if(isset($options['ads'])) {  esc_attr_e ( $options['ads'] ); } ?></textarea></td>
+							<td> (for strong words use html "strong" tag)</td>
+						</tr>
+					</table>
 				</td>
-				<td scope="row" align="left">(for strong words use html "strong" tag)</td>
 			</tr>
 			<tr>
 				<td scope="row" align="left"><label for="theme_settings[ads_button]"><?php _e( 'Text in button' ); ?></label></td>
@@ -104,8 +108,7 @@ function telerik_theme_options_render_page() {
 			<tr>
 				<td scope="row" align="left"><label for="theme_settings[sidebar_left_cat]"><?php _e( 'Left sidebar category' ); ?></label></td>
 				<td><input id="theme_settings[sidebar_left_cat]" type="text" size="25" name="theme_settings[sidebar_left_cat]" 
-					value="<?php if(isset($options['sidebar_left_cat'])) {  esc_attr_e ( $options['sidebar_left_cat'] );} ?>" /></td>
-				<td scope="row" align="left">(about us category)</td>
+					value="<?php if(isset($options['sidebar_left_cat'])) {  esc_attr_e ( $options['sidebar_left_cat'] );} ?>" /> (about us category)</td>
 			</tr>
 			<tr>
 				<td scope="row" align="left"><label for="theme_settings[sidebar_left_title]"><?php _e( 'Title' ); ?></label></td>
@@ -116,8 +119,7 @@ function telerik_theme_options_render_page() {
 			<tr>
 				<td scope="row" align="left"><label for="theme_settings[sidebar_center_cat]"><?php _e( 'Center sidebar category' ); ?></label></td>
 				<td><input id="theme_settings[sidebar_center_cat]" type="text" size="25" name="theme_settings[sidebar_center_cat]"
-					value="<?php if(isset($options['sidebar_center_cat'])) { esc_attr_e ( $options['sidebar_center_cat'] );} ?>" /></td>
-				<td scope="row" align="left">(we’re hiring category)</td>
+					value="<?php if(isset($options['sidebar_center_cat'])) { esc_attr_e ( $options['sidebar_center_cat'] );} ?>" /> (we’re hiring category)</td>
 			</tr>
 			<tr>
 				<td scope="row" align="left"><label for="theme_settings[sidebar_center_title]"><?php _e( 'Title' ); ?></label></td>
@@ -128,8 +130,7 @@ function telerik_theme_options_render_page() {
 			<tr>
 				<td scope="row" align="left"><label for="theme_settings[sidebar_right_cat]"><?php _e( 'Right sidebar category' ); ?></label></td>
 				<td><input id="theme_settings[sidebar_right_cat]" type="text" size="25" name="theme_settings[sidebar_right_cat]"
-					value="<?php if(isset($options['sidebar_right_cat'])) { esc_attr_e( $options['sidebar_right_cat'] );} ?>" /></td>
-				<td scope="row" align="left">(our services category)</td>
+					value="<?php if(isset($options['sidebar_right_cat'])) { esc_attr_e( $options['sidebar_right_cat'] );} ?>" /> (our services category)</td>
 			</tr>
 			<tr>
 				<td scope="row" align="left"><label for="theme_settings[sidebar_right_title]"><?php _e( 'Title' ); ?></label></td>
@@ -139,7 +140,7 @@ function telerik_theme_options_render_page() {
 			<tr>
 				<td scope="row" align="left"><label for="theme_settings[sidebar_right_num]"><?php _e( 'Number posts' ); ?></label></td>
 				<td><input id="theme_settings[sidebar_right_num]" type="text" size="25" name="theme_settings[sidebar_right_num]"
-					value="<?php if(isset($options['sidebar_right_num'])) { esc_attr_e( $options['sidebar_right_num'] );} ?>" /></td>
+					value="<?php if(isset($options['sidebar_right_num'])) { esc_attr_e( $options['sidebar_right_num'] );} ?>" /> (must be less than the value in the wp-admin > Settings > Reading)</td>
 			</tr>
 		</table>
 		<hr />
@@ -160,6 +161,7 @@ function telerik_theme_options_render_page() {
 				<td scope="row" align="left"><label for="theme_settings[sidebar_footer_left_num]"><?php _e( 'Number posts' ); ?></label></td>
 				<td><input id="theme_settings[sidebar_footer_left_num]" type="text" size="25" name="theme_settings[sidebar_footer_left_num]"
 					value="<?php if(isset($options['sidebar_footer_left_num'])) { esc_attr_e( $options['sidebar_footer_left_num'] );} ?>" /></td>
+				<td scope="row" align="left">(must be less than the value in the wp-admin > Settings > Reading)</td>
 			</tr>
 			<tr><td><br/></td></tr>
 			<tr>
