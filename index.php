@@ -30,6 +30,7 @@
 	<?php endwhile; ?>
 				<div class="navigation">
 <?php if ( $wp_query->max_num_pages >1) : ?>
+					<br/>
 					<div class="alignleft blue-btn">
 						<?php next_posts_link('&laquo; Older Entries') ?>
 					</div>
