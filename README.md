@@ -6,6 +6,7 @@
 #Курс "CMS системи 2013"
 
 http://cmswordpress.kanchev.telerik-students.org/<br/>
+http://cmsfinalproject.kanchev.telerik-students.org/<br/>
 [HomeWorks](https://github.com/kancho-kanchev/Telerik/tree/master/CMS%20Systems) - ([assignment](https://github.com/kancho-kanchev/Telerik/blob/master/CMS%20Systems/README.md)) - 16.04.2013<br/>
 [Final Project](https://github.com/kancho-kanchev/Telerik-CMS-Course-2013-Final-Project) - ([assignment](https://github.com/kancho-kanchev/Telerik-CMS-Course-2013-Final-Project/tree/master/Project-2)) - 30.05.2013<br/>
 
