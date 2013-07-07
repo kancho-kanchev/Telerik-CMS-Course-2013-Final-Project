@@ -138,6 +138,30 @@ add_theme_support( 'post-thumbnails');
  * Sets up the sidebars.
  */
 $sidebar_args = array(
+		'id' => 'sidebar-about-us',
+		'name' => 'Footer About Us',
+		'description'   => 'Choose category from template options page',
+		'class'         => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>'
+);
+register_sidebar($sidebar_args);
+
+$sidebar_args = array(
+		'id' => 'sidebar-hiring',
+		'name' => 'Footer We are hiring',
+		'description'   => 'Choose category from template options page',
+		'class'         => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>'
+);
+register_sidebar($sidebar_args);
+
+$sidebar_args = array(
 		'id' => 'sidebar-right',
 		'name' => 'Right Sidebar',
 		'description'   => 'Choose category from template options page',
@@ -150,8 +174,32 @@ $sidebar_args = array(
 register_sidebar($sidebar_args);
 
 $sidebar_args = array(
+		'id' => 'sidebar-footer-left',
+		'name' => 'Footer Left Sidebar',
+		'description'   => 'Choose category from template options page',
+		'class'         => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>'
+);
+register_sidebar($sidebar_args);
+
+$sidebar_args = array(
 		'id' => 'sidebar-footer-center',
 		'name' => 'Footer Center Sidebar',
+		'description'   => 'Choose category from template options page',
+		'class'         => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>'
+);
+register_sidebar($sidebar_args);
+
+$sidebar_args = array(
+		'id' => 'sidebar-footer-right',
+		'name' => 'Footer Right Sidebar',
 		'description'   => 'Choose category from template options page',
 		'class'         => '',
 		'before_widget' => '',
