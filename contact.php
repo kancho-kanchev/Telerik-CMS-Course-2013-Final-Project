@@ -58,7 +58,7 @@ $options = get_option( 'theme_settings' );
 					$yourmessage = '';
 					$url = '';
 					$phone = '';
-					echo '<p style="color: blue;">'.$contact_submitted.'</p>';
+					echo '<p class = "blue-btn-contact" >'.$contact_submitted.'</p>';
 				}
 				else echo '<p style="color: red;">Please enter your name, a valid email address, your message and the answer to the simple maths question before sending your message.</p>';
 			}
